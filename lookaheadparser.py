@@ -23,6 +23,8 @@ def parse_function_declaration():
 	if tok[0] != "Identifier":
 		fail("Missing identifer.")
 	func_name = tok[1]
+	if len(func_name) > 32:
+		fail("Identifier name too long.")
 	tok = nextToken()
 	if tok[0] != "Open-Paren":
 		fail("Missing (")

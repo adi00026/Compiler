@@ -1,6 +1,7 @@
 import sys
 from lexer import lex
-from parser import parse
+import parser
+import lookaheadparser
 
 '''
 Rules For Identifiers:
@@ -16,19 +17,20 @@ Accepts C program from user, reads it and passes it to lexer for lexical analysi
 '''
 def main():
 	source_file = sys.argv[1]
-
 	if check_file(source_file):
-		f=open(source_file, "r")
-
+		
+		f = open(source_file, "r")
+		
 		if f.mode == 'r':
-			contents =f.read()
-			#contents = contents.replace('\n','')
-			token_list = lex(contents)
+			contents = f.read()
+			compile(contents)
 
-			if len(sys.argv) > 2:
-				print "Token List: " , token_list
-			
-			parse(token_list)
+'''
+Produces a token list by calling the lexer and uses the token list to produce an abstract syntax tree.
+'''
+def compile(contents):
+	token_list = lex(contents)			
+	ast = lookaheadparser.parse(token_list)
 
 '''
 Checks if .c file is passed to the compiler. 

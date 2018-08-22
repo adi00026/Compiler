@@ -22,8 +22,12 @@ def main():
 
 		if f.mode == 'r':
 			contents =f.read()
-			contents = contents.replace('\n','')
+			#contents = contents.replace('\n','')
 			token_list = lex(contents)
+
+			if len(sys.argv) > 2:
+				print "Token List: " , token_list
+			
 			parse(token_list)
 
 '''

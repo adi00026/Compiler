@@ -15,7 +15,7 @@ def lex(source):
 		if source[x].isalpha() or source[x].isdigit() or source[x] == '_':
 			newStr = newStr + source[x]
 
-		elif source[x] == ' ':
+		elif source[x] == ' ' or source[x] == '\n':
 			token_list.append(check(newStr))			
 			newStr = ""
 
@@ -50,7 +50,7 @@ def lex(source):
 	return token_list
 
 def check(newStr):
-	if newStr == '':
+	if newStr == '' or newStr == '\n':
 		return None
 	elif newStr in keywords:
 		return ("Keyword", newStr)

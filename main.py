@@ -2,6 +2,7 @@ import sys
 from lexer import lex
 import parser
 import lookaheadparser
+from codegeneration import create
 
 '''
 Rules For Identifiers:
@@ -31,7 +32,8 @@ Produces a token list by calling the lexer and uses the token list to produce an
 def compile(contents):
 	token_list = lex(contents)			
 	ast = lookaheadparser.parse(token_list)
-
+	create(ast)
+	
 '''
 Checks if .c file is passed to the compiler. 
 '''

@@ -68,4 +68,7 @@ class UnOp():
 		return self.oper
 
 	def next(self):
-		return False
+		if isinstance(self.inner_exp, UnOp):
+			return self.inner_exp
+		else:
+			return False

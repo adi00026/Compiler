@@ -31,9 +31,11 @@ Produces a token list by calling the lexer and uses the token list to produce an
 '''
 def compile(contents):
 	token_list = lex(contents)			
+	#print "Token List: " , token_list
 	ast = lookaheadparser.parse(token_list)
 	create(ast)
-	
+	#print "Created ast"
+
 '''
 Checks if .c file is passed to the compiler. 
 '''

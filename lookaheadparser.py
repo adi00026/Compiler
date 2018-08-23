@@ -1,5 +1,6 @@
 import sys
-from ASTNodes import Program, Function, Return, Constant
+from ASTNodes import Program, Function, Return, Constant, UnOp
+#import operator
 
 '''
 Recursive descent parser. Each method corresponds to a nonterminal symbol in the grammar.
@@ -49,9 +50,14 @@ def parse_statement():
 
 def parse_expression():
 	tok = nextToken()
-	if tok[0] != "Integer":
+	if tok[0] == "Integer":
+		return Constant(tok[1])
+	elif tok[0] == "Operator":
+		inner_exp = parse_expression()
+		return UnOp(tok[1], inner_exp)
+	else:
 		fail("Missing integer.")
-	return Constant(tok[1])
+	
 
 def fail(err):
 	print "ERROR " + err
@@ -67,3 +73,10 @@ def lookahead():
 	global token_list
 	return token_list[0]
 
+# def get_operator(token):
+# 	if tok[1] == '-':
+# 		return operator.neg
+# 	elif tok[1] == '~':
+# 		return operator.invert
+# 	elif tok[1] == '!':
+# 		return operator.not_

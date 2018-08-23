@@ -44,6 +44,21 @@ def lex(source):
 			newStr = ""
 			token_list.append(("Semicolon", ";"))
 
+		elif source[x] == "-":
+			token_list.append(check(newStr))
+			newStr = ""
+			token_list.append(("Operator", "-"))
+
+		elif source[x] == "~":
+			token_list.append(check(newStr))
+			newStr = ""
+			token_list.append(("Operator", "~"))
+
+		elif source[x] == "!":
+			token_list.append(check(newStr))
+			newStr = ""
+			token_list.append(("Operator", "!"))
+
 		x = x + 1
 	
 	token_list = filter(None, token_list)

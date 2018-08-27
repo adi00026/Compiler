@@ -38,6 +38,10 @@ To run the executable and see what its returns type:
 
 $? is the return code from the last run process. This should output `14` which is the expected output of the program we compiled.
 
+## Error Reporting
+
+I've tried to report errors with as much information as possible. I handle errors while parsing the syntax. I include the line number of the offending statement and in most cases, the missing token (if that's the nature of the error).
+
 ## Inspiration
 
 I have always been curious about compilers; they're immensely complicated tools that we programmers take for granted. Unfortunately, compilers are inaccessible to most undergraduate level students. However with certain resources I was able to start writing a small compiler of my own. Firstly, I owe my thanks to the writers of the Dragon Book for helping me understand how languages are expressed with grammars and the complicated theory of parsing languages. Next, I'd like to thank Abdulaziz Ghuloum for his paper titled *An Incremental Approach to Compiler Construction* which uses small, well-defined steps to incrementally build a compiler. At the end of each step you have a working compiler, with more functionality than the one you had before. Lastly, I'd like to thank Nora Sandler. Her blog posts, defined the functionality of the lexer and parser without which I would've found it close to impossible to write the parser by hand.

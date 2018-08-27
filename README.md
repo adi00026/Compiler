@@ -18,7 +18,7 @@ Clone the repository using the following command : `git clone https://github.com
 
 Say we want to compile and execute the program *more_nested_ops.c* in the *Test Programs* folder. We'll need to run the following commands:
 
-`cd MiniC`
+`cd MiniC \n`
 `python main.py Test\ Programs/more_nested_ops.c`
 
 The compiler generates x86 assembly and writes it to a file called *assembly.s*. If you want to view the assembly generated, type:

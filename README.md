@@ -1,6 +1,6 @@
 # Compiler
 
-MiniC is a compiler that translates a small subset of the C programming language to x86 assembly. This is a work in progress. I've written the lexer and parser by hand, using a top-down recursive descent parser to generate the syntax tree. I'll update this readme as I add more functionality to the compiler. The *Test Programs* folder will always contain programs that the compiler succesfully translates, with the most recent commits containing more advanced functionality. The ultimate goal of this project is to be able to write a compiler powerful enough to handle function calls. Along the way, I'll get to solve many interesting problems such as evaluating expressions and handling iterative constructs!
+MiniC is a compiler that translates a small subset of the C programming language to x86 assembly. This is a work in progress. I've written the lexer and parser by hand, using a top-down recursive descent parser to generate the syntax tree. I'll update this readme as I add more functionality to the compiler. The *Test Programs* folder will always contain programs that the compiler succesfully translates, with the most recent commits containing more advanced functionality than those before it. The ultimate goal of this project is to be able to write a compiler powerful enough to handle function calls. Along the way, I'll get to solve many interesting problems such as evaluating expressions and handling iterative constructs!
 
 ## Getting Started
 

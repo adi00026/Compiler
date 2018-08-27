@@ -35,6 +35,7 @@ The `-m32` flag tells gcc to create a 32-bit binary and `out` is the name of the
 To run the executable and see what its returns type:
 
 `./out`
+
 `echo $?`
 
 $? is the return code from the last run process. This should output `14` which is the expected output of the program we compiled.

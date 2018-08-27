@@ -48,4 +48,4 @@ I have always been curious about compilers; they're immensely complicated tools 
 
 ## Future Plans
 
-I'll work on this project whenever I find time outside of my school work. At some point I'd like to experience working with lexer and parser generator tools such as Lex and Bison. Until then, stay posted!
+I'll work on this project whenever I find time outside of my school work. At some point I'd like to experience working with lexer and parser generator tools such as Lex and Bison. Until then - stay posted!

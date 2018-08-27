@@ -40,7 +40,7 @@ $? is the return code from the last run process. This should output `14` which i
 
 ## Error Reporting
 
-I've tried to report errors with as much information as possible. I handle errors while parsing the syntax. I include the line number of the offending statement and in most cases, the missing token (if that's the nature of the error).
+I've tried to report errors with as much information as possible. I handle errors while parsing the syntax. I include the line number of the offending statement and in most cases, the missing token (if that's the nature of the error). Ofcourse, you can always try it out by writing a faulty program.
 
 ## Inspiration
 

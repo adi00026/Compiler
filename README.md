@@ -12,7 +12,7 @@ The compiler runs on **Python 2.7**.
 
 ### Installing
 
-Clone the repository using the following command : `git clone https://github.com/adi00026/MiniC`
+Download the repository.
 
 ## Running the Test Programs
 
